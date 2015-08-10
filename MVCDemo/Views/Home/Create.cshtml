@@ -1,0 +1,28 @@
+﻿@model MVCDemo.Models.Post
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Create Post:</legend>
+
+        <div class="editor-label">
+            @Html.DisplayNameFor(model => model.postContent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.postContent)
+            @Html.ValidationMessageFor(model => model.postContent)
+        </div>
+
+        
+        <br />
+        <input type="submit" value="Submit">
+        <input type="button" value="Return to Homepage" onclick="window.location.href='@Url.Action("Home")'">
+    </fieldset>
+
+}

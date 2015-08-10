@@ -1,0 +1,105 @@
+﻿body {
+    background-color: #f0f2f5;
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    background: #1d3b75;
+    color: white;
+    font: bold 12px book antiqua;
+    font-size: 50px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    position: fixed;
+}
+
+.container {
+    border: 2px solid #e4e6eb;
+    border-bottom: none;
+    padding-top: 80px;
+    bottom: 40px;
+}
+
+.postBody {
+    border: 1px solid #d8dde6;
+    background-color: white;
+    width: 50%;
+    margin: 0px auto;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.posterName {
+    color: #1d3b75;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.posterContent {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.postBody:hover {
+    background-color: #edf2fa;
+    border: 1px solid gray;
+}
+
+.postDate {
+    font-size: 10px;
+    color: gray;
+}
+
+form {
+    width: 50%;
+    position: relative;
+    top: 80px;
+    margin: auto;
+    font-size: large;
+}
+
+form2 {
+    width: 50%;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    font-size: large;
+}
+
+footer {
+    background: #1d3b75;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+.returnbutton {
+    width: 11%;
+    margin: 0px auto;
+    padding-top: 10px;
+}
+
+.createbutton {
+    width: 7%;
+    display: inline;
+    margin: 10px 617px;
+}
+
+.nametitle {
+    color: #1d3b75;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    padding-bottom: 3px;
+}

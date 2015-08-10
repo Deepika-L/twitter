@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MVCDemo.Models.Post>
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div class="container">
+    <div class="nametitle">
+        <b>@Html.DisplayFor(modelItem => Model.FirstOrDefault().posterName)<text>'s Posts</text></b>
+    </div>
+    <div class="form2">
+        @Html.Partial("_Detail", new MVCDemo.Models.Post())
+    </div>
+    <br /><br /><br /><br /><br />
+  
+    @foreach (var item in Model)
+    {
+        <div class="postBody">
+            <div class="posterName">
+                <b>@Html.DisplayFor(modelItem => item.posterName)</b>
+            </div>
+            <div class="postDate">
+                @Html.DisplayFor(modelItem => item.Timestamp)
+            </div>
+            <div class="posterContent">
+                @Html.DisplayFor(modelItem => item.postContent)
+            </div>
+        </div>
+    }
+    <div class="returnbutton">
+        <input type="button" value="Return to Homepage" onclick="window.location.href='@Url.Action("Home")'">
+    </div>
+</div>

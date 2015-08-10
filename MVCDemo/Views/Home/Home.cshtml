@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVCDemo.Models.Post>
+<div class="container">
+    <div class="nametitle">
+        <b>@ViewBag.Welcome</b>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="postBody">
+            <div class="posterName">
+
+                <b>@Html.ActionLink(item.posterName, "Detail", new { name = item.posterName })</b>
+
+            </div>
+            <div class="postDate">
+                @Html.DisplayFor(modelItem => item.Timestamp)
+            </div>
+            <div class="posterContent">
+                @Html.DisplayFor(modelItem => item.postContent)
+            </div>
+        </div>
+    }
+</div>
+
+<footer>
+    <div class="createbutton">
+        
+        @if (Session["UserName"] == null)
+        {
+            <input type="button" class="btn btn-success" value="Login" onclick="window.location.href='@Url.Action("Login","Account")'">
+        }
+
+        else
+        {
+            <input type="button" class="btn btn-success" value="Create Post" onclick="window.location.href='@Url.Action("Create")'">
+            <input type="button" class="btn btn-success" value="Logout" onclick="window.location.href='@Url.Action("Logout","Account")'">
+        }
+    </div>
+</footer>
